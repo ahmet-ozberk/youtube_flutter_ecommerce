@@ -19,7 +19,13 @@ class CustomBottomNavBar extends ConsumerWidget {
       decoration: const BoxDecoration(
           color: Constant.darkWhite,
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10), topRight: Radius.circular(10))),
+              topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 8,
+            ),
+          ]),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,14 +62,14 @@ class CustomBottomNavBar extends ConsumerWidget {
                 Visibility(
                   visible: i == watch.currentIndex,
                   child: Positioned.fill(
-                    top: -32,
+                    top: -34,
                     child: Align(
                       alignment: Alignment.topCenter,
                       child: Container(
                         height: 2,
                         width: 32,
                         decoration: BoxDecoration(
-                          borderRadius: 4.allBR,
+                          borderRadius: 10.allBR,
                           color: Constant.orange,
                         ),
                       ),
